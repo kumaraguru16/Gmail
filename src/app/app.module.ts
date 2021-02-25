@@ -15,6 +15,9 @@ import { SectionComponent } from './section/section.component';
 import { LeftnavbarComponent } from './leftnavbar/leftnavbar.component';
 import { ContentComponent } from './content/content.component';
 import { RightnavbarComponent } from './rightnavbar/rightnavbar.component';
+import { Innercontainer1Component } from './leftnavbar/innercontainer1/innercontainer1.component';
+import { Innercontainer2Component } from './leftnavbar/innercontainer2/innercontainer2.component';
+import { ComposeComponent } from './leftnavbar/compose/compose.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { RightnavbarComponent } from './rightnavbar/rightnavbar.component';
     SectionComponent,
     LeftnavbarComponent,
     ContentComponent,
-    RightnavbarComponent
+    RightnavbarComponent,
+    Innercontainer1Component,
+    Innercontainer2Component,
+    ComposeComponent
   ],
   imports: [
     BrowserModule,
