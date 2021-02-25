@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  background-color:white;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbN5CYyccoh94EBNB_7FuEmYi3wCexNQLvg&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+* {
+  box-sizing: border-box;
+}
