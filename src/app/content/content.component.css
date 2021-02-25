@@ -1,0 +1,28 @@
+.section-middle {
+    width: 100%;
+    height: 661px;
+}
+
+.section-middle-top {
+    width: 100%;
+    height: 55px;
+    background-color: transparent;
+    display: flex;
+}
+
+.section-middle-bottom {
+    width: 100%;
+    height: 606px;
+}
+
+.section-middle-bottom-top {
+    width: 100%;
+    height: 60px;
+    background-color: yellow;
+}
+
+.section-middle-bottom-bottom {
+    width: 100%;
+    height: 546px;
+    background-color: red;
+}

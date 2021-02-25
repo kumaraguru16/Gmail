@@ -1,23 +1,25 @@
-.container{
+.container {
     background-color: blue;
     width: 100%;
     height: 650px;
     display: flex;
     flex-direction: row;
-    
 }
-app-leftnavbar{
-    width:23%;
+
+app-leftnavbar {
+    width: 23%;
     height: 100%;
-    background-color: azure;
+    background-color: transparent;
 }
-app-content{
-    width:85%;
+
+app-content {
+    width: 85%;
     height: 100%;
-    background-color: rgb(16, 241, 241);
+    background-color: transparent;
 }
-app-rightnavbar{
-    width:4%;
+
+app-rightnavbar {
+    width: 4%;
     height: 100%;
-    background-color: chartreuse;
+    background-color: transparent;
 }
