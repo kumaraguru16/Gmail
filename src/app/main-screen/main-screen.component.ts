@@ -14,7 +14,7 @@ export class MainScreenComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buttonClicked(flag : string){
+  buttonClicked(flag: string) {
     //this.isNavBarOptionEnable = flag;
     console.log(this.isNavBarOptionEnable);
   }

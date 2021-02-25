@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NavbarService } from '../service/navbar.service';
 
 @Component({
@@ -8,17 +8,16 @@ import { NavbarService } from '../service/navbar.service';
 })
 export class NavbarComponent implements OnInit {
 
-  // @Output() isNavBarEnable = new EventEmitter<string>();
-  // flag: boolean = false;
+  visible: boolean = false;
+
 
   constructor(private navbarservice: NavbarService) { }
 
   ngOnInit(): void {
   }
 
-  onClickNav(){
-    // this.isNavBarEnable.emit("fksj");
-    // this.flag = !this.flag;
-    this.navbarservice.fun();
+  onClickNav() {
+    this.visible = !this.visible;
+    this.navbarservice.setToggle(this.visible);
   }
 }
