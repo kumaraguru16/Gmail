@@ -8,19 +8,41 @@ import { NavbarService } from '../service/navbar.service';
 })
 export class LeftnavbarComponent implements OnInit, OnChanges {
 
-  toggle: boolean = false;
+  largerWidth = '250px';
+  shorterWidth = '65px';
+  @Input() isMenuButtonEnabled: boolean = true;
 
-  constructor(private navbarservice: NavbarService) { }
-
-  ngOnInit(): void {
-    this.navbarservice.$toggle.subscribe(val => {
-      this.toggle = val;
-      console.log(this.toggle);
-    });
+  constructor() { 
   }
 
-  ngOnChanges() {
+  ngOnInit(){
+  }
+  
+  ngOnChanges(){
+    if(this.isMenuButtonEnabled){
+      this.changeContainerWidth(this.largerWidth);
+    }
+    else{
+      this.changeContainerWidth(this.shorterWidth);
+    }
+  }
 
+  changeContainerWidth(width : string){
+    document.getElementById("containerWidth")!.style.width = width;
+  }
+
+  changeContainerWidthOnMouseEnter(){
+    if(!this.isMenuButtonEnabled){
+      document.getElementById("containerWidth")!.style.transitionDelay = ".5s";
+      this.changeContainerWidth(this.largerWidth);
+    }
+  }
+
+  changeContainerWidthOnMouseLeave(){
+    if(!this.isMenuButtonEnabled){
+      document.getElementById("containerWidth")!.style.transitionDelay = "0s";
+      this.changeContainerWidth(this.shorterWidth);
+    }
   }
 
 }

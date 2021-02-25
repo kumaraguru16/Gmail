@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class NavbarService {
-  isNavBarOptionEnable = new BehaviorSubject<boolean>(false);
+  isNavBarOptionEnable = new BehaviorSubject<boolean>(true);
   public $toggle = this.isNavBarOptionEnable.asObservable();
   constructor() { }
 

@@ -1,6 +1,6 @@
-<app-navbar (isNavBarOptionEnable)="buttonClicked()"></app-navbar>
+<app-navbar></app-navbar>
 <div class="container">
-    <app-leftnavbar></app-leftnavbar>
+    <app-leftnavbar [isMenuButtonEnabled]="toggle"></app-leftnavbar>
     <app-content></app-content>
     <app-rightnavbar></app-rightnavbar>
 </div>

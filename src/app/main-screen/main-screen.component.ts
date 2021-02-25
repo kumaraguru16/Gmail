@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NavbarService } from '../service/navbar.service';
 
 @Component({
   selector: 'app-main-screen',
@@ -6,16 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./main-screen.component.css']
 })
 export class MainScreenComponent implements OnInit {
-
-  @Input() isNavBarOptionEnable: boolean = true;
-
-  constructor() { }
+  toggle: boolean = true;
+  constructor(private navbarservice: NavbarService) { }
 
   ngOnInit(): void {
-  }
-
-  buttonClicked(flag: string) {
-    //this.isNavBarOptionEnable = flag;
-    console.log(this.isNavBarOptionEnable);
+      this.navbarservice.$toggle.subscribe(val => {
+      this.toggle = val;
+    });
   }
 }

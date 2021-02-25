@@ -8,7 +8,7 @@ import { NavbarService } from '../service/navbar.service';
 })
 export class NavbarComponent implements OnInit {
 
-  visible: boolean = false;
+  visible: boolean = true;
 
 
   constructor(private navbarservice: NavbarService) { }
@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onClickNav() {
-    this.visible = !this.visible;
     this.navbarservice.setToggle(this.visible);
+    this.visible = !this.visible;
   }
 }
