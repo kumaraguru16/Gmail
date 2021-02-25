@@ -1,10 +1,26 @@
 .container{
-    width: 250px;
-    height: 100vh;
-    background-color: transparent;
-    transition: width .3s;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 150px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 1px gray;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    color:black;
+}
+.container span{
+    font-size: 20px;
+    margin-left: 5px;
+}
+.container i{
+    margin-left: 10px;
+    font-size: 30px;
+}
+.container:hover{
+    z-index: 1000;
+    box-shadow: 3px 3px 3px gray;
 }

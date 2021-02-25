@@ -1,1 +1,29 @@
-<p>innercontainer1 works!</p>
+<div class="container" id="containerWidth" 
+    (mouseenter) = "changeContainerWidthOnMouseEnter()"
+    (mouseleave) = "changeContainerWidthOnMouseLeave()">
+    <app-compose [isMenuButtonEnabled]="isMenuButtonEnabled"></app-compose>
+    <button id="inbox"  id="containerWidth">
+        <i class="material-icons">inbox</i>
+        <span>Inbox</span>
+    </button>
+    <button id="containerWidth">
+        <i class="material-icons">star</i>
+        <span>Starred</span>
+    </button>
+    <button id="containerWidth">
+        <i class="material-icons">timer</i>
+        <span>Snoozed</span>
+    </button>
+    <button id="containerWidth">
+        <i class="material-icons">forward</i>
+        <span>Sent</span>
+    </button>
+    <button id="containerWidth">
+        <i class="material-icons">mode</i>
+        <span>Drafts</span>
+    </button>
+    <button id="containerWidth">
+        <i class="material-icons">keyboard_arrow_down</i>
+        <span>More</span>
+    </button>
+</div>
