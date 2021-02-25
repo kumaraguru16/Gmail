@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NavbarService } from '../service/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  // @Output() isNavBarEnable = new EventEmitter<string>();
+  // flag: boolean = false;
+
+  constructor(private navbarservice: NavbarService) { }
 
   ngOnInit(): void {
   }
 
+  onClickNav(){
+    // this.isNavBarEnable.emit("fksj");
+    // this.flag = !this.flag;
+    this.navbarservice.fun();
+  }
 }

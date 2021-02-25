@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main-screen',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainScreenComponent implements OnInit {
 
+  @Input() isNavBarOptionEnable: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  buttonClicked(flag : string){
+    //this.isNavBarOptionEnable = flag;
+    console.log(this.isNavBarOptionEnable);
+  }
 }
