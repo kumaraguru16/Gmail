@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-<<<<<<< Updated upstream
+
 body {
   margin: 0;
   background-color:white;
@@ -7,10 +7,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-* {
-  box-sizing: border-box;
-}
-=======
 
 * {
     margin: 0;
@@ -19,4 +15,3 @@ body {
     font-family: Garamond, serif;
     font-weight: 300;
 }
->>>>>>> Stashed changes

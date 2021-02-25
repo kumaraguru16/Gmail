@@ -3,37 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-<<<<<<< Updated upstream
-import { MainScreenComponent } from './main-screen/main-screen.component';
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
+
 import { NavbarComponent } from './navbar/navbar.component';
-=======
+
 import { MainScreenComponent } from './main-screen/main-screen.component';
->>>>>>> 84c990b6e5d2910445d4895b71b1fa21e6e8db3e
->>>>>>> Stashed changes
-=======
+
 import { SectionComponent } from './section/section.component';
->>>>>>> Stashed changes
+
+
+import { LeftnavbarComponent } from './leftnavbar/leftnavbar.component';
+import { ContentComponent } from './content/content.component';
+import { RightnavbarComponent } from './rightnavbar/rightnavbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    MainScreenComponent
-=======
-<<<<<<< HEAD
-    NavbarComponent
-=======
-    MainScreenComponent
->>>>>>> 84c990b6e5d2910445d4895b71b1fa21e6e8db3e
->>>>>>> Stashed changes
-=======
+    NavbarComponent,
     MainScreenComponent,
-    SectionComponent
->>>>>>> Stashed changes
+    SectionComponent,
+    LeftnavbarComponent,
+    ContentComponent,
+    RightnavbarComponent
   ],
   imports: [
     BrowserModule,
