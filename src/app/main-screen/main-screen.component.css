@@ -1,13 +1,24 @@
+<<<<<<< Updated upstream
 .container {
+=======
+.container{
+>>>>>>> Stashed changes
     background-color: transparent;
     width: 100%;
     height: 650px;
     display: flex;
     flex-direction: row;
 }
+<<<<<<< Updated upstream
 
 app-leftnavbar {
     background-color: transparent;
+=======
+app-leftnavbar{
+    width:23%;
+    height: 100%;
+    background-color:transparent;
+>>>>>>> Stashed changes
 }
 
 app-content {
@@ -19,5 +30,9 @@ app-content {
 app-rightnavbar {
     width: 50px;
     height: 100%;
+<<<<<<< Updated upstream
     background-color: transparent;
+=======
+    background-color:transparent;
+>>>>>>> Stashed changes
 }

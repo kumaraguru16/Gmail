@@ -1,1 +1,28 @@
-<p>rightnavbar works!</p>
+<div class="container">
+    <div *ngIf="flag" class="top">
+        <div class="icons">
+                <div class="one">
+                    <i class="material-icons">calendar_today</i>
+                </div>
+                <div class="one">
+                    <i class="material-icons">speaker_notes</i>
+                </div>
+                <div class="one">
+                    <i class="material-icons">task</i>
+                </div>
+                <div class="one">
+                    <i class="material-icons">connect_without_contact</i>
+                </div>
+        </div>
+        <div class="icons">
+            <div class="one">
+                <i class="material-icons">add</i>
+            </div>
+        </div>
+        
+    </div>
+    <div class="bottom">
+        <button *ngIf="flag" (click)="hide()"><i class="material-icons">keyboard_arrow_right</i></button>
+        <button *ngIf="!flag" (click)="hide()"><i class="material-icons">keyboard_arrow_left</i></button>
+    </div>
+</div>

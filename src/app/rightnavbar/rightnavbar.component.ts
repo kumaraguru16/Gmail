@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rightnavbar.component.css']
 })
 export class RightnavbarComponent implements OnInit {
-
+  flag:boolean=true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  hide(){
+    this.flag=!this.flag;
+  }
 }
