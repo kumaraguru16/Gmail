@@ -1,60 +1,23 @@
-:root {
-    --white: #F5F5F5;
-}
-
-.container {
-    background-color: var(--white);
-    background-position: center;
-    width: 100vw;
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    display: flex;
-    flex: 0.11;
+.container{
+    background-color: blue;
     width: 100%;
-    height: 100%;
-    background-color: #111111;
-}
-
-.main-content {
+    height: 650px;
     display: flex;
-    flex: 0.89;
-    width: 100%;
-    height: 100%;
     flex-direction: row;
+    
 }
-
-.aside {
-    display: flex;
-    flex: 0.17;
-    width: 100%;
+app-leftnavbar{
+    width:23%;
     height: 100%;
-    background-color: #444685;
+    background-color: azure;
 }
-
-.content {
-    display: flex;
-    flex-direction: column;
-    flex: 0.83;
-    width: 100%;
+app-content{
+    width:85%;
     height: 100%;
-    background-color: seagreen;
+    background-color: rgb(16, 241, 241);
 }
-
-.section-header {
-    display: flex;
-    flex: 0.08;
-    width: 100%;
-    background-color: #f30d0d;
-}
-
-.section-main-content {
-    display: flex;
-    flex: 1;
-    width: 100%;
-    background-color: #111111;
+app-rightnavbar{
+    width:4%;
+    height: 100%;
+    background-color: chartreuse;
 }
