@@ -27,7 +27,6 @@ export class ComposeComponent implements OnInit, OnChanges {
   }
 
   changeContainerWidth(width : string){
-    console.log(width);
     document.getElementById("composeContainerWidth")!.style.width = width;
   }
 

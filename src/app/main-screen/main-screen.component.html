@@ -2,7 +2,7 @@
     <app-navbar (theme)="changetheme($event)"></app-navbar>
     <div class="container">
         <app-leftnavbar [isMenuButtonEnabled]="toggle"></app-leftnavbar>
-        <app-content></app-content>
+        <app-content [isMenuButtonEnabled]="toggle"></app-content>
         <app-rightnavbar></app-rightnavbar>
     </div>
 </body>
