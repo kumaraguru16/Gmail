@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { NavbarComponent } from './navbar/navbar.component';
@@ -30,11 +31,13 @@ import { ComposeComponent } from './leftnavbar/compose/compose.component';
     RightnavbarComponent,
     Innercontainer1Component,
     Innercontainer2Component,
-    ComposeComponent
+    ComposeComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

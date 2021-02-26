@@ -1,4 +1,6 @@
 import { Component, Input, OnInit, OnChanges } from '@angular/core';
+import { MailData } from '../interfaces/mail-data.model';
+import { DataService } from '../service/data.service';
 import { NavbarService } from '../service/navbar.service';
 
 @Component({
@@ -6,29 +8,20 @@ import { NavbarService } from '../service/navbar.service';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent implements OnInit, OnChanges {
+export class ContentComponent implements OnInit {
 
-  constructor(private navbarservice: NavbarService) { }
-
-  shorterWidth = '950px';
-  largerWidth = '1135px';
-  @Input() isMenuButtonEnabled: boolean = true;
-
-
-  ngOnInit(){
-
-  }
-  ngOnChanges(){
-    if(this.isMenuButtonEnabled){
-      this.changeContainerWidth(this.shorterWidth);
-    }
-    else{
-      this.changeContainerWidth(this.largerWidth);
-    }
+  constructor(private navbarservice: NavbarService, private dataservice: DataService) { }
+  allMail?: MailData;
+  toggle: boolean = true;
+  ngOnInit() {
+    this.navbarservice.$toggle.subscribe(val => {
+      this.toggle = val;
+      console.log(this.toggle);
+    });
+    this.dataservice.getMailData().subscribe(val => {
+      this.allMail = val;
+      console.log(this.allMail);
+    });
   }
 
-  changeContainerWidth(width : string){
-    console.log("content width changed to..."+width);
-    document.getElementById("contentWidth")!.style.width = width;
-  }
 }

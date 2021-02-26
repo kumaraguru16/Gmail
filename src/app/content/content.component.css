@@ -1,4 +1,10 @@
-#contentWidth {
+.shortWidth {
+    width: 950px;
+    transition: width .3s;
+}
+
+.longWidth {
+    width: 1135px;
     transition: width .3s;
 }
 
