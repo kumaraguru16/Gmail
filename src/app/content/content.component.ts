@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarService } from '../service/navbar.service';
 
 @Component({
   selector: 'app-content',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-
-  constructor() { }
+  toggle: boolean = true;
+  constructor(private navbarservice: NavbarService) { }
 
   ngOnInit(): void {
-  }
+    this.navbarservice.$toggle.subscribe(val => {
+      this.toggle = val;
 
+    });
+  }
 }

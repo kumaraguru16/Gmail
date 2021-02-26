@@ -11,8 +11,13 @@ export class MainScreenComponent implements OnInit {
   constructor(private navbarservice: NavbarService) { }
 
   ngOnInit(): void {
-      this.navbarservice.$toggle.subscribe(val => {
+    this.navbarservice.$toggle.subscribe(val => {
       this.toggle = val;
+      if (this.toggle) {
+
+      } else {
+
+      }
     });
   }
 }

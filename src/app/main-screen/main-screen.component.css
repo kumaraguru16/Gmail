@@ -11,13 +11,13 @@ app-leftnavbar {
 }
 
 app-content {
-    width: 950px;
+    width: 75%;
     height: 100%;
     background-color: transparent;
 }
 
 app-rightnavbar {
-    width: 50px;
+    width: 4%;
     height: 100%;
     background-color: transparent;
 }
