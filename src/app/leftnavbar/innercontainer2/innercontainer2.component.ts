@@ -20,28 +20,17 @@ export class Innercontainer2Component implements OnInit, OnChanges {
   ngOnChanges(){
     if(this.isMenuButtonEnabled){
       this.changeContainerWidth(this.largerWidth);
+      document.getElementById("newMeetingText")!.style.display = "inline";
+      document.getElementById("joinMeetingText")!.style.display = "inline";
     }
     else{
       this.changeContainerWidth(this.shorterWidth);
+      document.getElementById("newMeetingText")!.style.display = "none";
+      document.getElementById("joinMeetingText")!.style.display = "none";
     }
   }
 
   changeContainerWidth(width : string){
-    document.getElementById("containerWidth")!.style.width = width;
+    document.getElementById("innerContainerWidth2")!.style.width = width;
   }
-
-  changeContainerWidthOnMouseEnter(){
-    if(!this.isMenuButtonEnabled){
-      document.getElementById("containerWidth")!.style.transitionDelay = ".5s";
-      this.changeContainerWidth(this.largerWidth);
-    }
-  }
-
-  changeContainerWidthOnMouseLeave(){
-    if(!this.isMenuButtonEnabled){
-      document.getElementById("containerWidth")!.style.transitionDelay = "0s";
-      this.changeContainerWidth(this.shorterWidth);
-    }
-  }
-
 }

@@ -1,5 +1,6 @@
 .container{
     height: 120px;
+    transition: width .3s;
     background-color: transparent;
     border-bottom-color: lightgrey;
     border-bottom-style: solid;
@@ -15,6 +16,7 @@
 button{
     width: 240px;
     height: 35px;
+    padding-left: 10px;
     outline: 0;
     border: 0;
     border-top-right-radius: 15px;
@@ -23,6 +25,7 @@ button{
     display: flex;
     justify-content: flex-start;
     align-items: center;  
+    transition: width .3s;
 }
 button i{
     margin-left: 10px;

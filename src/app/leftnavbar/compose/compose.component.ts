@@ -7,8 +7,8 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 })
 export class ComposeComponent implements OnInit, OnChanges {
 
-  largerWidth = '250px';
-  shorterWidth = '65px';
+  largerWidth = '150px';
+  shorterWidth = '50px';
   @Input() isMenuButtonEnabled: boolean = true;
 
   constructor() { 
@@ -20,26 +20,29 @@ export class ComposeComponent implements OnInit, OnChanges {
   ngOnChanges(){
     if(this.isMenuButtonEnabled){
       this.changeContainerWidth(this.largerWidth);
+      document.getElementById("composeContainerText")!.style.display = "inline";
     }
     else{
       this.changeContainerWidth(this.shorterWidth);
+      document.getElementById("composeContainerText")!.style.display = "none";
     }
   }
 
   changeContainerWidth(width : string){
-    document.getElementById("containerWidth")!.style.width = width;
+    console.log(width);
+    document.getElementById("composeContainerWidth")!.style.width = width;
   }
 
   changeContainerWidthOnMouseEnter(){
     if(!this.isMenuButtonEnabled){
-      document.getElementById("containerWidth")!.style.transitionDelay = ".5s";
+      document.getElementById("composeContainerWidth")!.style.transitionDelay = ".5s";
       this.changeContainerWidth(this.largerWidth);
     }
   }
 
   changeContainerWidthOnMouseLeave(){
     if(!this.isMenuButtonEnabled){
-      document.getElementById("containerWidth")!.style.transitionDelay = "0s";
+      document.getElementById("composeContainerWidth")!.style.transitionDelay = "0s";
       this.changeContainerWidth(this.shorterWidth);
     }
   }

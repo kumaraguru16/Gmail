@@ -1,29 +1,27 @@
-<div class="container" id="containerWidth" 
-    (mouseenter) = "changeContainerWidthOnMouseEnter()"
-    (mouseleave) = "changeContainerWidthOnMouseLeave()">
-    <app-compose [isMenuButtonEnabled]="isMenuButtonEnabled"></app-compose>
-    <button id="inbox"  id="containerWidth">
+<div class="container" id="innerContainerWidth1">
+    <app-compose [isMenuButtonEnabled]="toggle"></app-compose>
+    <button id="inbox"  id="innerContainerWidth">
         <i class="material-icons">inbox</i>
-        <span>Inbox</span>
+        <span id="inboxText">Inbox</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">star</i>
-        <span>Starred</span>
+        <span id="starredText">Starred</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">timer</i>
-        <span>Snoozed</span>
+        <span id="snoozedText">Snoozed</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">forward</i>
-        <span>Sent</span>
+        <span id="sentText">Sent</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">mode</i>
-        <span>Drafts</span>
+        <span id="draftsText">Drafts</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">keyboard_arrow_down</i>
-        <span>More</span>
+        <span id="moreText">More</span>
     </button>
 </div>

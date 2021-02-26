@@ -12,10 +12,13 @@ export class LeftnavbarComponent implements OnInit, OnChanges {
   shorterWidth = '65px';
   @Input() isMenuButtonEnabled: boolean = true;
 
-  constructor() { 
-  }
+  toggle: boolean = true;
+  constructor(private navbarservice: NavbarService) { }
 
-  ngOnInit(){
+  ngOnInit(): void {
+      this.navbarservice.$toggle.subscribe(val => {
+      this.toggle = val;
+    });
   }
   
   ngOnChanges(){
@@ -33,15 +36,11 @@ export class LeftnavbarComponent implements OnInit, OnChanges {
 
   changeContainerWidthOnMouseEnter(){
     if(!this.isMenuButtonEnabled){
-      document.getElementById("containerWidth")!.style.transitionDelay = ".5s";
-      this.changeContainerWidth(this.largerWidth);
     }
   }
 
   changeContainerWidthOnMouseLeave(){
     if(!this.isMenuButtonEnabled){
-      document.getElementById("containerWidth")!.style.transitionDelay = "0s";
-      this.changeContainerWidth(this.shorterWidth);
     }
   }
 
