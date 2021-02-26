@@ -1,8 +1,3 @@
-.long-width {
-    transform: scaleX(1.0007);
-    transform-origin: right;
-}
-
 .section-middle {
     height: 661px;
 }

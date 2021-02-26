@@ -20,4 +20,10 @@ export class MainScreenComponent implements OnInit {
       }
     });
   }
+  changetheme(value:string){
+    document.getElementById("wrapper")!.style.background=value?value:"white";
+    document.getElementById("wrapper")!.style.backgroundRepeat="no-repeat";
+    document.getElementById("wrapper")!.style.backgroundSize="cover";
+    console.log("main component",value);
+  }
 }

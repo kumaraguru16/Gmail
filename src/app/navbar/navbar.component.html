@@ -10,6 +10,16 @@
             <i class="material-icons">arrow_drop_down</i>
         </div>
     </div>
+    <div>
+        <button (click)="form()">
+            <i class="material-icons">art_track</i>
+        </button>
+        <div *ngIf="flag" style="position: absolute;">
+              <div class="theme"><button (click)="themevalue(black)">Dark</button></div>
+              <div class="theme"><button (click)="themevalue(white)">White</button></div>
+              <div class="theme"><button (click)="themevalue(url)">Theme</button></div>
+        </div>
+    </div>
     <div class="options">
         <i class="material-icons">help_outline</i>
         <i class="material-icons">settings</i>
