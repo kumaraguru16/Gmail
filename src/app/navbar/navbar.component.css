@@ -69,19 +69,21 @@ i {
 i:hover {
     background-color: rgba(32, 33, 36, 0.059);
 }
-button{
+
+button {
     background-color: transparent;
     outline: 0;
     border: 0;
 }
-.theme{
-    background-color:white;
+
+.theme {
+    background-color: white;
     opacity: 40%;
-    width:50px;
+    width: 50px;
     text-align: center;
 }
-.theme>button:active{
+
+.theme>button:active {
     background-color: aqua;
     width: 100%;
-   
 }
