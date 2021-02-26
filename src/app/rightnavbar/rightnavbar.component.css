@@ -10,7 +10,14 @@ button {
     flex-direction: column;
     align-content: space-between;
 }
-
+.top{
+    position: absolute;
+    z-index: 1;
+    top:50pxpx;
+    /* bottom: 30px; */
+    right: 0;
+    width: 50px;
+}
 .icons i {
     margin-right: 20px;
     margin-bottom: 20px;
