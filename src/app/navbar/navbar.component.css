@@ -74,3 +74,14 @@ button{
     outline: 0;
     border: 0;
 }
+.theme{
+    background-color:white;
+    opacity: 40%;
+    width:50px;
+    text-align: center;
+}
+.theme>button:active{
+    background-color: aqua;
+    width: 100%;
+   
+}
