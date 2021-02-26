@@ -30,18 +30,4 @@ export class ComposeComponent implements OnInit, OnChanges {
     document.getElementById("composeContainerWidth")!.style.width = width;
   }
 
-  changeContainerWidthOnMouseEnter(){
-    if(!this.isMenuButtonEnabled){
-      document.getElementById("composeContainerWidth")!.style.transitionDelay = ".5s";
-      this.changeContainerWidth(this.largerWidth);
-    }
-  }
-
-  changeContainerWidthOnMouseLeave(){
-    if(!this.isMenuButtonEnabled){
-      document.getElementById("composeContainerWidth")!.style.transitionDelay = "0s";
-      this.changeContainerWidth(this.shorterWidth);
-    }
-  }
-
 }
