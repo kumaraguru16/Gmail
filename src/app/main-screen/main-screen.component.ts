@@ -8,6 +8,7 @@ import { NavbarService } from '../service/navbar.service';
 })
 export class MainScreenComponent implements OnInit {
   toggle: boolean = true;
+  searchtext:any="";
   constructor(private navbarservice: NavbarService) { }
 
   ngOnInit(): void {
@@ -19,6 +20,10 @@ export class MainScreenComponent implements OnInit {
 
       }
     });
+  }
+  searchcontent(search:any){
+     this.searchtext=search;
+     console.log("search value :",search);
   }
   changetheme(value:string){
     document.getElementById("wrapper")!.style.background=value?value:"white";

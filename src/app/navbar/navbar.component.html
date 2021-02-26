@@ -6,7 +6,7 @@
     <div class="search">
         <div class="search-wrapper">
             <i class="material-icons"> search</i>
-            <input class="searchbar" placeholder="Search mail" />
+            <input  (keyup)="onKey($event)" class="searchbar" placeholder="Search mail" />
             <i class="material-icons">arrow_drop_down</i>
         </div>
     </div>

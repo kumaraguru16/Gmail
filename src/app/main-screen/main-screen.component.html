@@ -1,5 +1,5 @@
 <body class="wrapper" id="wrapper">
-    <app-navbar (theme)="changetheme($event)"></app-navbar>
+    <app-navbar (theme)="changetheme($event)" (search)="searchcontent($event)"></app-navbar>
     <div class="container">
         <app-leftnavbar [isMenuButtonEnabled]="toggle"></app-leftnavbar>
         <app-content [isMenuButtonEnabled]="toggle"></app-content>

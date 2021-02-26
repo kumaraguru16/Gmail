@@ -8,6 +8,7 @@ import { NavbarService } from '../service/navbar.service';
 })
 export class NavbarComponent implements OnInit {
   @Output() theme= new EventEmitter<string>();
+  @Output() search= new EventEmitter<any>();
   visible: boolean = true;
   flag:boolean=false;
   black:string="#400000 ";
@@ -25,6 +26,10 @@ export class NavbarComponent implements OnInit {
   }
   form(){
     this.flag=!this.flag;
+  }
+  onKey(event:any) 
+  {
+    this.search.emit( event.target.value);
   }
   onClickNav() {
     this.navbarservice.setToggle(this.visible);
