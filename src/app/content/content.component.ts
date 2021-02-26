@@ -23,5 +23,14 @@ export class ContentComponent implements OnInit {
       console.log(this.allMail);
     });
   }
-
+  delete(id: number) {
+    this.dataservice.deleteMailData(id).subscribe(val => {
+      this.refresh();
+    });
+  }
+  refresh() {
+    this.dataservice.getMailData().subscribe(val => {
+      this.allMail = val;
+    });
+  }
 }
