@@ -1,20 +1,22 @@
-button{
+button {
     border: 0;
     outline: 0;
     background-color: transparent;
 }
-.container{
+
+.container {
     height: 100%;
     display: flex;
     flex-direction: column;
-   
     align-content: space-between;
 }
-.icons i{
-    margin-right:20px ;
+
+.icons i {
+    margin-right: 20px;
     margin-bottom: 20px;
 }
-.bottom{
+
+.bottom {
     align-self: flex-end;
     align-items: flex-end;
     position: absolute;
@@ -23,7 +25,8 @@ button{
     right: 0;
     width: 50px;
 }
-i{
+
+i {
     cursor: pointer;
     display: flex;
     width: 40px;
@@ -33,12 +36,12 @@ i{
     color: rgb(74, 74, 74);
     outline: none;
     border-radius: 50%;
- }
+}
 
 i:hover {
     background-color: rgba(32, 33, 36, 0.059);
 }
 
-.icons{
+.icons {
     margin-bottom: 20px;
 }

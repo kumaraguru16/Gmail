@@ -1,16 +1,17 @@
 .container {
-    background-color:transparent;
+    background-color: transparent;
     width: 100%;
     height: 650px;
     display: flex;
     flex-direction: row;
-    
 }
-.wrapper{
+
+.wrapper {
     background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbN5CYyccoh94EBNB_7FuEmYi3wCexNQLvg&usqp=CAU");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 app-leftnavbar {
     background-color: transparent;
 }
