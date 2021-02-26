@@ -33,8 +33,8 @@ export class Innercontainer1Component implements OnInit, OnChanges {
   changeContainerWidth(width : string){
     document.getElementById("innerContainerWidth1")!.style.width = width;
     let button = document.getElementsByTagName('button');
-    for(let i=0; i<button.length; i++){
-      button[i].style.width=width;
-    }
+    // for(let i=0; i<button.length; i++){
+    //   button[i].style.width=width;
+    // }
   }
 }

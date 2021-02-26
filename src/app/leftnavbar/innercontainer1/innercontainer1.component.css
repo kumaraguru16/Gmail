@@ -3,7 +3,6 @@
     height: 300px;
     background-color: transparent;
     transition: width .3s;
-    overflow-x: auto;
     border-bottom-color: lightgrey;
     border-bottom-style: solid;
 }
