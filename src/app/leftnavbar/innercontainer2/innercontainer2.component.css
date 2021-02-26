@@ -27,6 +27,9 @@ button{
     align-items: center;  
     transition: width .3s;
 }
+div i{
+    color: gray;
+}
 button i{
     margin-left: 10px;
     color: gray;

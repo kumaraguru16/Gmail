@@ -20,11 +20,9 @@ export class ComposeComponent implements OnInit, OnChanges {
   ngOnChanges(){
     if(this.isMenuButtonEnabled){
       this.changeContainerWidth(this.largerWidth);
-      document.getElementById("composeContainerText")!.style.display = "inline";
     }
     else{
       this.changeContainerWidth(this.shorterWidth);
-      document.getElementById("composeContainerText")!.style.display = "none";
     }
   }
 

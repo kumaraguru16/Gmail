@@ -2,26 +2,26 @@
     <app-compose [isMenuButtonEnabled]="toggle"></app-compose>
     <button id="inbox"  id="innerContainerWidth">
         <i class="material-icons">inbox</i>
-        <span id="inboxText">Inbox</span>
+        <span *ngIf="isMenuButtonEnabled">Inbox</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">star</i>
-        <span id="starredText">Starred</span>
+        <span *ngIf="isMenuButtonEnabled">Starred</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">timer</i>
-        <span id="snoozedText">Snoozed</span>
+        <span *ngIf="isMenuButtonEnabled">Snoozed</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">forward</i>
-        <span id="sentText">Sent</span>
+        <span *ngIf="isMenuButtonEnabled">Sent</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">mode</i>
-        <span id="draftsText">Drafts</span>
+        <span *ngIf="isMenuButtonEnabled">Drafts</span>
     </button>
     <button id="containerWidth">
         <i class="material-icons">keyboard_arrow_down</i>
-        <span id="moreText">More</span>
+        <span *ngIf="isMenuButtonEnabled">More</span>
     </button>
 </div>

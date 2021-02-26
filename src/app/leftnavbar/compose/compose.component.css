@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     color:black;
+    transition: width .3s;
 }
 .container span{
     font-size: 20px;

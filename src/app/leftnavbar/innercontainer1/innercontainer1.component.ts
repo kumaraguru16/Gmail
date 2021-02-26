@@ -24,21 +24,9 @@ export class Innercontainer1Component implements OnInit, OnChanges {
   ngOnChanges(){
     if(this.isMenuButtonEnabled){
       this.changeContainerWidth(this.largerWidth);
-      document.getElementById("inboxText")!.style.display = "inline";
-      document.getElementById("starredText")!.style.display = "inline";
-      document.getElementById("snoozedText")!.style.display = "inline";
-      document.getElementById("sentText")!.style.display = "inline";
-      document.getElementById("draftsText")!.style.display = "inline";
-      document.getElementById("moreText")!.style.display = "inline";
     }
     else{
       this.changeContainerWidth(this.shorterWidth);
-      document.getElementById("inboxText")!.style.display = "none";
-      document.getElementById("starredText")!.style.display = "none";
-      document.getElementById("snoozedText")!.style.display = "none";
-      document.getElementById("sentText")!.style.display = "none";
-      document.getElementById("draftsText")!.style.display = "none";
-      document.getElementById("moreText")!.style.display = "none";
     }
   }
 

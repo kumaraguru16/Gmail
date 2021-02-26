@@ -20,13 +20,9 @@ export class Innercontainer2Component implements OnInit, OnChanges {
   ngOnChanges(){
     if(this.isMenuButtonEnabled){
       this.changeContainerWidth(this.largerWidth);
-      document.getElementById("newMeetingText")!.style.display = "inline";
-      document.getElementById("joinMeetingText")!.style.display = "inline";
     }
     else{
       this.changeContainerWidth(this.shorterWidth);
-      document.getElementById("newMeetingText")!.style.display = "none";
-      document.getElementById("joinMeetingText")!.style.display = "none";
     }
   }
 

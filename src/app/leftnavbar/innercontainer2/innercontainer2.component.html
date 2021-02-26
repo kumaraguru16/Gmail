@@ -1,11 +1,14 @@
 <div class="container" id="innerContainerWidth2">
-    <div>Meet</div>
-    <button>
-        <i class="material-icons">keyboard</i>
-        <span id="newMeetingText">New Meeting</span>
-    </button>
+    <div *ngIf="isMenuButtonEnabled">Meet</div>
+    <div *ngIf="!isMenuButtonEnabled">
+        <i class="material-icons">photo_camera_front</i>
+    </div>
     <button>
         <i class="material-icons">video_camera_front</i>
-        <span id="joinMeetingText">Join a Meeting</span>
+        <span *ngIf="isMenuButtonEnabled">New Meeting</span>
+    </button>
+    <button>
+        <i class="material-icons">keyboard</i>
+        <span *ngIf="isMenuButtonEnabled">Join a Meeting</span>
     </button>
 </div>
