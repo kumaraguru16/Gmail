@@ -11,7 +11,7 @@ export class DataService {
 
   }
   getMailData() {
-    return this.http.get<MailData>(this.API_BASE_URL + "/mails");
+    return this.http.get<MailData[]>(this.API_BASE_URL + "/mails");
   }
 
   deleteMailData(id: number) {

@@ -1,6 +1,6 @@
 export interface MailData {
-    id: number;
+    id: string;
     subject: string;
     message: string;
-    time: Date;
+    time: number;
 }

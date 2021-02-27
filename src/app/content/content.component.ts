@@ -11,7 +11,8 @@ import { NavbarService } from '../service/navbar.service';
 export class ContentComponent implements OnInit {
 
   constructor(private navbarservice: NavbarService, private dataservice: DataService) { }
-  allMail?: MailData;
+  contentSelected: number = 1;
+  allMail: MailData[] = [];
   toggle: boolean = true;
   ngOnInit() {
     this.navbarservice.$toggle.subscribe(val => {
@@ -23,8 +24,8 @@ export class ContentComponent implements OnInit {
       console.log(this.allMail);
     });
   }
-  delete(id: number) {
-    this.dataservice.deleteMailData(id).subscribe(val => {
+  delete(id: string) {
+    this.dataservice.deleteMailData(+id).subscribe(val => {
       this.refresh();
     });
   }

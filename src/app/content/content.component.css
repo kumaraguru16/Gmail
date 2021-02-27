@@ -208,26 +208,35 @@ i {
 
 .social:hover p,
 .social:hover i {
-    color: #1d77ec;
+    color: #1a73e8;
 }
 
 .promotion:hover p,
 .promotion:hover i {
-    color: #178237;
+    color: #188038;
 }
 
 .primary:hover {
-    border-bottom: 3px solid #df3226;
+    border-bottom: 3px solid #d93025;
+}
+
+.primary .active-button {
+    border-bottom: 3px solid #d93025;
+}
+
+.primary .active-paragraph,
+.primary .active-icon {
+    color: #d93025;
 }
 
 .social:hover {
     color: #1a73e8;
-    border-bottom: 3px solid #1d77ec;
+    border-bottom: 3px solid #1a73e8;
 }
 
 .promotion:hover {
     color: #188038;
-    border-bottom: 3px solid#178237;
+    border-bottom: 3px solid#188038;
 }
 
 .options-right {
