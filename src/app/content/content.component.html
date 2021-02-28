@@ -1,18 +1,28 @@
 <div class="section-middle" [ngClass]="toggle ? 'shortWidth' : 'longWidth'">
     <div class="section-middle-top">
         <div class="options">
-            <i class="material-icons">check_box_outline_blank</i>
-            <span class="material-icons">arrow_drop_down</span>
-            <i class="material-icons">refresh</i>
-            <i class="material-icons">archive</i>
-            <i class="material-icons">report</i>
-            <i class="material-icons">delete</i>
-            <i class="material-icons">mark_as_unread</i>
-            <i class="material-icons">query_builder</i>
-            <i class="material-icons">add_task</i>
-            <i class="material-icons"> drive_file_move</i>
-            <i class="material-icons">label</i>
-            <i class="material-icons">more_vert</i>
+            <div *ngIf="!isCheckboxClicked" (click)="checkboxChecked()">
+                <div class="options">
+                    <i class="material-icons">check_box_outline_blank </i>
+                    <span class="material-icons">arrow_drop_down</span>
+                    <i class="material-icons">refresh</i>
+                    <i class="material-icons">more_vert</i>
+                </div>
+            </div>
+            <div *ngIf="isCheckboxClicked" (click)="checkboxChecked()">
+                <div class="options">
+                    <i class="material-icons">check_box </i>
+                    <i class="material-icons">archive</i>
+                    <i class="material-icons">report</i>
+                    <i class="material-icons">delete</i> |
+                    <i class="material-icons">mark_as_unread</i>
+                    <i class="material-icons">query_builder</i>
+                    <i class="material-icons">add_task</i> |
+                    <i class="material-icons"> drive_file_move</i>
+                    <i class="material-icons">label</i>
+                    <i class="material-icons">more_vert</i>
+                </div>
+            </div>
         </div>
 
         <div class="options-right">
@@ -54,10 +64,12 @@
           [ngClass]="contentSelected === 3 ? 'border-bottom active-button' : ''"
         >
           <i class="material-icons icon-button">bookmark</i>
-          <abbr
-            title="Marketing, interests, social and political causes, and other promotional emails."
-            >Promtoion</abbr
-          >
+          <p class="paragraph-button">
+            <abbr
+              title="Marketing, interests, social and political causes, and other promotional emails."
+              >Promotion</abbr
+            >
+          </p>
         </div>
       </div>
     </div>
@@ -66,17 +78,32 @@
         <div *ngFor="let mailData of allMailPrimary">
           <div
             class="section-message-content"
-            [ngClass]="
-              mailData.isread === true ? 'section-message-content-read' : ''
-            "
+            [ngClass]="[
+              isCheckboxClicked === true
+                ? 'section-message-content-checked'
+                : mailData.isread === true
+                ? 'section-message-content-read'
+                : ''
+            ]"
             (click)="readPrimary(mailData.id)"
           >
             <div class="subject-name">
               <div class="label-icon-hover">
                 <i class="material-icons">drag_indicator</i>
               </div>
-              <i class="material-icons">check_box_outline_blank</i>
-              <i class="material-icons">star_outline</i>
+              <div *ngIf="!isCheckboxClicked" (click)="checkboxChecked()">
+                <i class="material-icons">check_box_outline_blank </i>
+              </div>
+              <div *ngIf="isCheckboxClicked" (click)="checkboxChecked()">
+                <i class="material-icons">check_box </i>
+              </div>
+              <div>
+                <i
+                  class="material-icons icon-blue"
+                  (click)="clickReadPrimary(mailData.id)"
+                  >star_outline</i
+                >
+              </div>
               <p>{{ mailData.subject }}</p>
             </div>
             <div class="message-content">
@@ -102,17 +129,27 @@
         <div *ngFor="let mailData of allMailSocial">
           <div
             class="section-message-content"
-            [ngClass]="
-              mailData.isread === true ? 'section-message-content-read' : ''
-            "
+            [ngClass]="[
+              mailData.isread === true ? 'section-message-content-read' : '',
+              isCheckboxClicked === true
+                ? 'section-message-content-checked'
+                : ''
+            ]"
             (click)="readSocial(mailData.id)"
           >
             <div class="subject-name">
               <div class="label-icon-hover">
                 <i class="material-icons">drag_indicator</i>
               </div>
-              <i class="material-icons">check_box_outline_blank</i>
-              <i class="material-icons">star_outline</i>
+              <div *ngIf="!isCheckboxClicked" (click)="checkboxChecked()">
+                <i class="material-icons">check_box_outline_blank </i>
+              </div>
+              <div *ngIf="isCheckboxClicked" (click)="checkboxChecked()">
+                <i class="material-icons">check_box </i>
+              </div>
+              <i class="material-icons" (click)="clickReadPrimary(mailData.id)"
+                >star_outline</i
+              >
 
               <p>{{ mailData.subject }}</p>
             </div>
@@ -139,17 +176,27 @@
         <div *ngFor="let mailData of allMailPromotion">
           <div
             class="section-message-content"
-            [ngClass]="
-              mailData.isread === true ? 'section-message-content-read' : ''
-            "
+            [ngClass]="[
+              mailData.isread === true ? 'section-message-content-read' : '',
+              isCheckboxClicked === true
+                ? 'section-message-content-checked'
+                : ''
+            ]"
             (click)="readPromotion(mailData.id)"
           >
             <div class="subject-name">
               <div class="label-icon-hover">
                 <i class="material-icons">drag_indicator</i>
               </div>
-              <i class="material-icons">check_box_outline_blank</i>
-              <i class="material-icons">star_outline</i>
+              <div *ngIf="!isCheckboxClicked" (click)="checkboxChecked()">
+                <i class="material-icons">check_box_outline_blank </i>
+              </div>
+              <div *ngIf="isCheckboxClicked" (click)="checkboxChecked()">
+                <i class="material-icons">check_box </i>
+              </div>
+              <i class="material-icons" (click)="clickReadPrimary(mailData.id)"
+                >star_outline</i
+              >
               <p>{{ mailData.subject }}</p>
             </div>
             <div class="message-content">

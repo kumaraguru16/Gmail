@@ -12,6 +12,7 @@ export class ContentComponent implements OnInit {
 
   constructor(private navbarservice: NavbarService, private dataservice: DataService) { }
   contentSelected: number = 1;
+  isCheckboxClicked: boolean = false;
   allMailPrimary: MailData[] = [];
   allMailSocial: MailData[] = [];
   allMailPromotion: MailData[] = [];
@@ -41,7 +42,11 @@ export class ContentComponent implements OnInit {
       this.refreshPrimary();
     });
   }
-
+  clickReadPrimary(id: string) {
+    this.dataservice.clickReadPrimary(+id).subscribe(val => {
+      this.refreshPrimary();
+    });
+  }
   refreshPrimary() {
     this.dataservice.getMailDataPrimary().subscribe(val => {
       this.allMailPrimary = val;
@@ -59,7 +64,11 @@ export class ContentComponent implements OnInit {
       this.refreshSocial();
     });
   }
-
+  clickReadSocial(id: string) {
+    this.dataservice.clickReadSocial(+id).subscribe(val => {
+      this.refreshPrimary();
+    });
+  }
   refreshSocial() {
     this.dataservice.getMailDataSocial().subscribe(val => {
       this.allMailSocial = val;
@@ -77,7 +86,11 @@ export class ContentComponent implements OnInit {
       this.refreshPromotion();
     });
   }
-
+  clickReadPromotion(id: string) {
+    this.dataservice.clickReadPromotion(+id).subscribe(val => {
+      this.refreshPrimary();
+    });
+  }
   refreshPromotion() {
     this.dataservice.getMailDataPromotion().subscribe(val => {
       this.allMailPromotion = val;
@@ -86,13 +99,19 @@ export class ContentComponent implements OnInit {
 
   changeContentSelectedPrimary() {
     this.contentSelected = 1;
+    this.isCheckboxClicked = false;
   }
 
   changeContentSelectedSocial() {
     this.contentSelected = 2;
+    this.isCheckboxClicked = false;
   }
 
   changeContentSelectedPromotion() {
     this.contentSelected = 3;
+    this.isCheckboxClicked = false;
+  }
+  checkboxChecked() {
+    this.isCheckboxClicked = !this.isCheckboxClicked;
   }
 }
