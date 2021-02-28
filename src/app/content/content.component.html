@@ -25,68 +25,171 @@
     </div>
     <div class="section-middle-bottom">
         <div class="section-middle-bottom-top">
-            <div class="button primary active-button">
-                <i class="material-icons icon-button active-icon">inbox</i>
-                <p class="paragraph-button active-paragraph">Primary</p>
-            </div>
-            <div class="button social">
-                <i class="material-icons icon-button">people</i>
-                <p class="paragraph-button">Social</p>
-            </div>
-            <div class="button promotion">
-                <i class="material-icons icon-button">bookmark</i>
-                <p class="paragraph-button">Promotions</p>
-            </div>
+            <div class="button primary" (click)="changeContentSelectedPrimary()">
+                <div class="border-bottom-non-active" [ngClass]="contentSelected === 1 ? 'border-bottom active-button' : ''">
+                    <i class="material-icons icon-button active-icon">inbox</i>
+                    <p class="paragraph-button active-paragraph">
+                        <abbr title="Person-to-person conversations and messages that don't appear in other tabs">Primary</abbr
+            >
+          </p>
         </div>
-        <div class="section-middle-bottom-bottom">
-            <div *ngIf="contentSelected === 1">
-                <div *ngFor="let mailData of allMail">
-                    <div class="section-message-content">
-                        <div class="subject-name">
-                            <div class="label-icon-hover">
-                                <i class="material-icons">drag_indicator</i>
-                            </div>
-                            <i class="material-icons">check_box_outline_blank</i>
-                            <i class="material-icons">star_outline</i>
-                            <i class="material-icons">label_important_outline</i>
-                            <p>{{ mailData.subject }}</p>
-                        </div>
-                        <div class="message-content">
-                            <p>{{ mailData.message }}</p>
-                        </div>
-                        <div class="section-message-content-time">
-                            <p>
-                                {{ mailData.time | date: "hh:mm a" }}
-                            </p>
-                        </div>
-                        <div class="icon-hover">
-                            <i class="material-icons">archive</i>
-                            <i class="material-icons" (click)="delete(mailData.id)">delete</i>
-                            <i class="material-icons">drafts</i>
-                            <i class="material-icons">access_time_filled</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-footer-content">
-                <div class="section-footer-content-left">
-                    <div class="section-footer-content-left-content">
-                        <p>7.02 GB of 15 GB used</p>
-                        <i class="material-icons">check_box_outline_blank</i>
-                    </div>
-                </div>
-                <div class="section-footer-content-middle">
-                    <p>Terms</p>
-                    .
-                    <p>Privacy</p>
-                    .
-                    <p>Program Policies</p>
-                </div>
-                <div class="section-footer-content-right">
-                    <p>Last account activity: 0 minutes ago</p>
-                    <p>Details</p>
-                </div>
-            </div>
+      </div>
+      <div class="button social" (click)="changeContentSelectedSocial()">
+        <div
+          class="border-bottom-non-active"
+          [ngClass]="contentSelected === 2 ? 'border-bottom active-button' : ''"
+        >
+          <i class="material-icons icon-button">people</i>
+          <p class="paragraph-button">
+            <abbr
+              title="Messages from social networks, media-sharing sites, online dating services, and other social websites"
+              >Social</abbr
+            >
+          </p>
         </div>
+      </div>
+      <div class="button promotion" (click)="changeContentSelectedPromotion()">
+        <div
+          class="border-bottom-non-active"
+          [ngClass]="contentSelected === 3 ? 'border-bottom active-button' : ''"
+        >
+          <i class="material-icons icon-button">bookmark</i>
+          <abbr
+            title="Marketing, interests, social and political causes, and other promotional emails."
+            >Promtoion</abbr
+          >
+        </div>
+      </div>
     </div>
+    <div class="section-middle-bottom-bottom">
+      <div *ngIf="contentSelected === 1">
+        <div *ngFor="let mailData of allMailPrimary">
+          <div
+            class="section-message-content"
+            [ngClass]="
+              mailData.isread === true ? 'section-message-content-read' : ''
+            "
+            (click)="readPrimary(mailData.id)"
+          >
+            <div class="subject-name">
+              <div class="label-icon-hover">
+                <i class="material-icons">drag_indicator</i>
+              </div>
+              <i class="material-icons">check_box_outline_blank</i>
+              <i class="material-icons">star_outline</i>
+              <p>{{ mailData.subject }}</p>
+            </div>
+            <div class="message-content">
+              <p>{{ mailData.message }}</p>
+            </div>
+            <div class="section-message-content-time">
+              <p>
+                {{ mailData.time | date: "hh:mm a" }}
+              </p>
+            </div>
+            <div class="icon-hover">
+              <i class="material-icons">archive</i>
+              <i class="material-icons" (click)="deletePrimary(mailData.id)"
+                >delete</i
+              >
+              <i class="material-icons">drafts</i>
+              <i class="material-icons">access_time_filled</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="contentSelected === 2">
+        <div *ngFor="let mailData of allMailSocial">
+          <div
+            class="section-message-content"
+            [ngClass]="
+              mailData.isread === true ? 'section-message-content-read' : ''
+            "
+            (click)="readSocial(mailData.id)"
+          >
+            <div class="subject-name">
+              <div class="label-icon-hover">
+                <i class="material-icons">drag_indicator</i>
+              </div>
+              <i class="material-icons">check_box_outline_blank</i>
+              <i class="material-icons">star_outline</i>
+
+              <p>{{ mailData.subject }}</p>
+            </div>
+            <div class="message-content">
+              <p>{{ mailData.message }}</p>
+            </div>
+            <div class="section-message-content-time">
+              <p>
+                {{ mailData.time | date: "hh:mm a" }}
+              </p>
+            </div>
+            <div class="icon-hover">
+              <i class="material-icons">archive</i>
+              <i class="material-icons" (click)="deleteSocial(mailData.id)"
+                >delete</i
+              >
+              <i class="material-icons">drafts</i>
+              <i class="material-icons">access_time_filled</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="contentSelected === 3">
+        <div *ngFor="let mailData of allMailPromotion">
+          <div
+            class="section-message-content"
+            [ngClass]="
+              mailData.isread === true ? 'section-message-content-read' : ''
+            "
+            (click)="readPromotion(mailData.id)"
+          >
+            <div class="subject-name">
+              <div class="label-icon-hover">
+                <i class="material-icons">drag_indicator</i>
+              </div>
+              <i class="material-icons">check_box_outline_blank</i>
+              <i class="material-icons">star_outline</i>
+              <p>{{ mailData.subject }}</p>
+            </div>
+            <div class="message-content">
+              <p>{{ mailData.message }}</p>
+            </div>
+            <div class="section-message-content-time">
+              <p>
+                {{ mailData.time | date: "hh:mm a" }}
+              </p>
+            </div>
+            <div class="icon-hover">
+              <i class="material-icons">archive</i>
+              <i class="material-icons" (click)="deletePromotion(mailData.id)"
+                >delete</i
+              >
+              <i class="material-icons">drafts</i>
+              <i class="material-icons">access_time_filled</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-footer-content">
+        <div class="section-footer-content-left">
+          <div class="section-footer-content-left-content">
+            <p>7.02 GB of 15 GB used</p>
+            <i class="material-icons">check_box_outline_blank</i>
+          </div>
+        </div>
+        <div class="section-footer-content-middle">
+          <p>Terms</p>
+          .
+          <p>Privacy</p>
+          .
+          <p>Program Policies</p>
+        </div>
+        <div class="section-footer-content-right">
+          <p>Last account activity: 0 minutes ago</p>
+          <p>Details</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

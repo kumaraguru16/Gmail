@@ -6,20 +6,27 @@
     <div class="search">
         <div class="search-wrapper">
             <i class="material-icons"> search</i>
-            <input  (keyup)="onKey($event)" class="searchbar" placeholder="Search mail" />
+            <input (keyup)="onKey($event)" class="searchbar" placeholder="Search mail" />
             <i class="material-icons">arrow_drop_down</i>
         </div>
     </div>
     <div>
-        <button (click)="form()" style="position: relative;">
-            <i class="material-icons">art_track</i>
-        </button>
-        <div *ngIf="flag" style="position: absolute;">
-             
-              <div class="theme"><button (click)="themevalue(white)">Default</button></div>
-              <div class="theme"><button (click)="themevalue(url2)">yellow</button></div>
-              <!-- <div class="theme"><button (click)="themevalue(url1)">Theme1</button></div> -->
-              <div class="theme"><button (click)="themevalue(url3)">unicorn</button></div>
+        <button (click)="form()" style="position: relative">
+      <i class="material-icons">art_track</i>
+    </button>
+        <div *ngIf="flag" style="position: absolute">
+            <div class="theme">
+                <button (click)="themevalue(white)">Default</button>
+            </div>
+            <div class="theme">
+                <button (click)="themevalue(url2)">yellow</button>
+            </div>
+            <!-- <div class="theme">
+                <button (click)="themevalue(url1)">Theme1</button>
+            </div> -->
+            <div class="theme">
+                <button (click)="themevalue(url3)">unicorn</button>
+            </div>
         </div>
     </div>
     <div class="options">

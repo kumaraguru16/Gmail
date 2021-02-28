@@ -12,26 +12,87 @@ export class ContentComponent implements OnInit {
 
   constructor(private navbarservice: NavbarService, private dataservice: DataService) { }
   contentSelected: number = 1;
-  allMail: MailData[] = [];
+  allMailPrimary: MailData[] = [];
+  allMailSocial: MailData[] = [];
+  allMailPromotion: MailData[] = [];
   toggle: boolean = true;
   ngOnInit() {
     this.navbarservice.$toggle.subscribe(val => {
       this.toggle = val;
-      console.log(this.toggle);
     });
-    this.dataservice.getMailData().subscribe(val => {
-      this.allMail = val;
-      console.log(this.allMail);
+    this.dataservice.getMailDataPrimary().subscribe(val => {
+      this.allMailPrimary = val;
+    });
+    this.dataservice.getMailDataSocial().subscribe(val => {
+      this.allMailSocial = val;
+    });
+    this.dataservice.getMailDataPromotion().subscribe(val => {
+      this.allMailPromotion = val;
     });
   }
-  delete(id: string) {
-    this.dataservice.deleteMailData(+id).subscribe(val => {
-      this.refresh();
+  deletePrimary(id: string) {
+    this.dataservice.deleteMailDataPrimary(+id).subscribe(val => {
+      this.refreshPrimary();
     });
   }
-  refresh() {
-    this.dataservice.getMailData().subscribe(val => {
-      this.allMail = val;
+
+  readPrimary(id: string) {
+    this.dataservice.readMailDataPrimary(+id).subscribe(val => {
+      this.refreshPrimary();
     });
+  }
+
+  refreshPrimary() {
+    this.dataservice.getMailDataPrimary().subscribe(val => {
+      this.allMailPrimary = val;
+    });
+  }
+
+  deleteSocial(id: string) {
+    this.dataservice.deleteMailDataSocial(+id).subscribe(val => {
+      this.refreshSocial();
+    });
+  }
+
+  readSocial(id: string) {
+    this.dataservice.readMailDataSocial(+id).subscribe(val => {
+      this.refreshSocial();
+    });
+  }
+
+  refreshSocial() {
+    this.dataservice.getMailDataSocial().subscribe(val => {
+      this.allMailSocial = val;
+    });
+  }
+
+  deletePromotion(id: string) {
+    this.dataservice.deleteMailDataPromotion(+id).subscribe(val => {
+      this.refreshPromotion();
+    });
+  }
+
+  readPromotion(id: string) {
+    this.dataservice.readMailDataPromotion(+id).subscribe(val => {
+      this.refreshPromotion();
+    });
+  }
+
+  refreshPromotion() {
+    this.dataservice.getMailDataPromotion().subscribe(val => {
+      this.allMailPromotion = val;
+    });
+  }
+
+  changeContentSelectedPrimary() {
+    this.contentSelected = 1;
+  }
+
+  changeContentSelectedSocial() {
+    this.contentSelected = 2;
+  }
+
+  changeContentSelectedPromotion() {
+    this.contentSelected = 3;
   }
 }

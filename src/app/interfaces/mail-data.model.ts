@@ -3,4 +3,5 @@ export interface MailData {
     subject: string;
     message: string;
     time: number;
+    isread: boolean;
 }

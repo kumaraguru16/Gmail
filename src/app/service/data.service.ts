@@ -10,11 +10,33 @@ export class DataService {
   constructor(private http: HttpClient) {
 
   }
-  getMailData() {
+  getMailDataPrimary() {
     return this.http.get<MailData[]>(this.API_BASE_URL + "/mails");
   }
-
-  deleteMailData(id: number) {
+  readMailDataPrimary(id: number) {
+    return this.http.put(this.API_BASE_URL + "/mails/" + id, { isread: true });
+  }
+  deleteMailDataPrimary(id: number) {
     return this.http.delete(this.API_BASE_URL + "/mails/" + id);
+  }
+
+  getMailDataSocial() {
+    return this.http.get<MailData[]>(this.API_BASE_URL + "/social");
+  }
+  readMailDataSocial(id: number) {
+    return this.http.put(this.API_BASE_URL + "/social/" + id, { isread: true });
+  }
+  deleteMailDataSocial(id: number) {
+    return this.http.delete(this.API_BASE_URL + "/social/" + id);
+  }
+
+  getMailDataPromotion() {
+    return this.http.get<MailData[]>(this.API_BASE_URL + "/promotion");
+  }
+  readMailDataPromotion(id: number) {
+    return this.http.put(this.API_BASE_URL + "/promotion/" + id, { isread: true });
+  }
+  deleteMailDataPromotion(id: number) {
+    return this.http.delete(this.API_BASE_URL + "/promotion/" + id);
   }
 }
