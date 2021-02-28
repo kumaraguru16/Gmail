@@ -5,17 +5,22 @@ button {
 }
 
 .container {
+    margin: 5px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-content: space-between;
+    border-left-style: solid;
+    border-left-color: hsla(0, 1%, 19%, 0.034);
+    /* border-left: 1px solid rgb(224, 224, 224); */
 }
 .top{
     position: absolute;
     z-index: 1;
-    top:50px;
+    top:70px;
+    
     /* bottom: 30px; */
-    right: 0;
+    right: 10px;
     width: 50px;
 }
 .icons i {

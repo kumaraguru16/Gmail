@@ -2,8 +2,12 @@
     height: 120px;
     transition: width .3s;
     background-color: transparent;
-    border-bottom-color: lightgrey;
+    /* border-bottom-color: lightgrey;
+    border-bottom-style: solid; */
     border-bottom-style: solid;
+    border-bottom-color: hsla(0, 1%, 19%, 0.034);
+    border-right-style: solid;
+    border-right-color: hsla(0, 1%, 19%, 0.034);
 }
 .container div{
     margin-left: 20px;
@@ -36,6 +40,7 @@ button i{
 }
 button span{
     margin-left: 10px;
+    font-size: 14px;
     color: black;
 }
 button:hover{

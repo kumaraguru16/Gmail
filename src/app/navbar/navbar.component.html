@@ -11,13 +11,15 @@
         </div>
     </div>
     <div>
-        <button (click)="form()">
+        <button (click)="form()" style="position: relative;">
             <i class="material-icons">art_track</i>
         </button>
         <div *ngIf="flag" style="position: absolute;">
-              <div class="theme"><button (click)="themevalue(black)">Dark</button></div>
-              <div class="theme"><button (click)="themevalue(white)">White</button></div>
-              <div class="theme"><button (click)="themevalue(url)">Theme</button></div>
+             
+              <div class="theme"><button (click)="themevalue(white)">Default</button></div>
+              <div class="theme"><button (click)="themevalue(url2)">yellow</button></div>
+              <!-- <div class="theme"><button (click)="themevalue(url1)">Theme1</button></div> -->
+              <div class="theme"><button (click)="themevalue(url3)">unicorn</button></div>
         </div>
     </div>
     <div class="options">

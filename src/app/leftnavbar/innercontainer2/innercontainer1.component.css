@@ -3,12 +3,10 @@
     height: 300px;
     background-color: transparent;
     transition: width .3s;
-    /* border-bottom-color: lightgrey;
-    border-bottom-style: solid; */
-    border-bottom-style: solid;
-    border-bottom-color: hsla(0, 1%, 19%, 0.034);
     border-right-style: solid;
     border-right-color: hsla(0, 1%, 19%, 0.034);
+   
+    margin: 5px;
 }
 
 button {
@@ -33,8 +31,8 @@ button i {
 
 button span {
     margin-left: 10px;
+    font-size: small;
     color: black;
-    font-size: 14px;
 }
 
 button:hover {

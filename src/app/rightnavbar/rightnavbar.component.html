@@ -2,27 +2,27 @@
     <div *ngIf="flag" class="top">
         <div class="icons">
                 <div class="one">
-                    <i class="material-icons">calendar_today</i>
+                    <i class="material-icons" style="color: rgba(0, 17, 112, 0.808);">calendar_today</i>
                 </div>
                 <div class="one">
-                    <i class="material-icons">speaker_notes</i>
+                    <i class="material-icons"  style="color: rgb(31, 110, 0);"> speaker_notes</i>
                 </div>
                 <div class="one">
-                    <i class="material-icons">task</i>
+                    <i class="material-icons"  style="color: rgb(0, 68, 73);">task</i>
                 </div>
                 <div class="one">
-                    <i class="material-icons">connect_without_contact</i>
+                    <i class="material-icons"  style="color: rgb(172, 3, 45);">connect_without_contact</i>
                 </div>
         </div>
         <div class="icons">
             <div class="one">
-                <i class="material-icons">add</i>
+                <i class="material-icons" style="color: rgb(24, 43, 43);">add</i>
             </div>
         </div>
         
     </div>
     <div class="bottom">
-        <button *ngIf="flag" (click)="hide()"><i class="material-icons">keyboard_arrow_right</i></button>
-        <button *ngIf="!flag" (click)="hide()"><i class="material-icons">keyboard_arrow_left</i></button>
+        <button *ngIf="flag" (click)="hide()"><i class="material-icons" style="color: rgb(24, 43, 43);">keyboard_arrow_right</i></button>
+        <button *ngIf="!flag" (click)="hide()"><i class="material-icons" style="color: rgb(24, 43, 43);">keyboard_arrow_left</i></button>
     </div>
 </div>
