@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { NavbarService } from 'src/app/service/navbar.service';
 
 @Component({
   selector: 'app-compose',
@@ -8,12 +9,13 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 export class ComposeComponent implements OnInit, OnChanges {
   [x: string]: any;
 
+  isCompose: boolean = false;
   largerWidth = '150px';
   shorterWidth = '50px';
   @Input() isMenuButtonEnabled: boolean = true;
   // sharedService: any;
 
-  constructor() { 
+  constructor(private navbarService: NavbarService) { 
   }
 
   ngOnInit(){
@@ -41,4 +43,8 @@ export class ComposeComponent implements OnInit, OnChanges {
     document.getElementById("composeContainerWidth")!.style.width = width;
   }
 
+  onClickCompose(){
+    this.isCompose = !this.isCompose;
+    this.navbarService.setToggleCompose(this.isCompose);
+  }
 }

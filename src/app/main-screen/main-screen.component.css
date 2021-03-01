@@ -10,6 +10,7 @@
     background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWbN5CYyccoh94EBNB_7FuEmYi3wCexNQLvg&usqp=CAU");
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 app-leftnavbar {
@@ -24,9 +25,10 @@ app-content {
 app-rightnavbar {
     width: 4%;
     height: 100%;
-    background-color: transparent;
+    background-color: transarent;
 }
 .mess{
     position: absolute;
     bottom: 0;
+    right: 91px;
 }

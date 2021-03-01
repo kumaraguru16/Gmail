@@ -7,13 +7,23 @@ import { NavbarService } from '../service/navbar.service';
   styleUrls: ['./main-screen.component.css']
 })
 export class MainScreenComponent implements OnInit {
+  composeTimes = 3;
   toggle: boolean = true;
+  toggleCompose: boolean = true;
   searchtext:any="";
   constructor(private navbarservice: NavbarService) { }
 
   ngOnInit(): void {
     this.navbarservice.$toggle.subscribe(val => {
       this.toggle = val;
+      if (this.toggle) {
+
+      } else {
+
+      }
+    });
+    this.navbarservice.$toggleCompose.subscribe(val => {
+      this.toggleCompose = val;
       if (this.toggle) {
 
       } else {
