@@ -19,6 +19,9 @@ import { RightnavbarComponent } from './rightnavbar/rightnavbar.component';
 import { Innercontainer1Component } from './leftnavbar/innercontainer1/innercontainer1.component';
 import { Innercontainer2Component } from './leftnavbar/innercontainer2/innercontainer2.component';
 import { ComposeComponent } from './leftnavbar/compose/compose.component';
+import { MessageComponent } from './message/message.component';
+import { FileUploadModule } from 'ng2-file-upload';
+import { NgxEmojiPickerModule } from 'ngx-emoji-picker';
 
 @NgModule({
   declarations: [
@@ -32,12 +35,15 @@ import { ComposeComponent } from './leftnavbar/compose/compose.component';
     Innercontainer1Component,
     Innercontainer2Component,
     ComposeComponent,
+    MessageComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FileUploadModule,
+    NgxEmojiPickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

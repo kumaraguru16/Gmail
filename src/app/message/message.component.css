@@ -1,0 +1,118 @@
+.msgContainer{
+    width: 581px;
+    height: 589px;
+    /* //background-color: red; */
+}
+.top{
+    width: 581px;
+    height: 40px;
+    /* //background-color: blue; */
+}
+*{
+    box-sizing: border-box;
+}
+.topleft{
+    float: left;
+    width: 75%;
+    height: 100%;
+    /* // margin-bottom: 2px;
+    // margin: 5px; */
+    border-collapse: collapse;
+    cursor: pointer;
+    font-size: .875rem;
+    color: white;
+    background-color: rgb(58, 56, 55);
+}
+.text{
+    padding-left: 11px;
+    font-size: 15px;
+    font-family: sans-serif;;
+    margin-bottom: 4px;
+}
+.topright{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    float: right;
+    width:25%;
+    height: 100%;
+    color: gray;
+    /* // margin-bottom: 2px;
+    // margin: 5px; */
+    cursor: pointer;
+    background-color: rgb(58, 56, 55);
+    padding:5px;
+    
+}
+.main{
+    width: 100%;
+    height: 549px;
+}
+input{
+    width: 100%;
+    border: none;
+    height:35px;
+    outline: none;
+}
+.mainTop{
+    width: 100%;
+    height: 490px;
+    background-color: white;
+}
+.mainBottom{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 59px;
+    justify-content: space-around;
+    background-color:transparent;
+}
+
+.leftI{
+    display: flex;
+    flex: 0.8;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.rightI{
+    display: flex;
+    /* // flex:0.4; */
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+textarea{
+    width: 100%;
+  /* //  height: 490px; */
+  border: none;
+  outline: none;
+}
+button{
+    width: 110px;
+    height: 40px;
+    background-color: rgb(108, 73, 238);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    color:white;
+    font-size: 20px;
+    font-style: inherit;
+    cursor: pointer;
+}
+.attach{
+    display: none;
+    cursor: pointer;
+}
+.miniB{
+   position: absolute;
+   bottom: 43%;
+   border-radius: 20px;
+}
+.ipText{
+    font-size: 15px;
+    margin-left: 5px;
+    font-family: sans-serif;
+}

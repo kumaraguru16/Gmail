@@ -1,0 +1,102 @@
+
+<div [hidden]="show">
+    <div class="msgContainer" *ngIf="isViewable">
+      <div class="top">
+        <div class="topleft">
+          <h3 class="text">New Message</h3>
+        </div>
+        <div class="topright">
+            <span class="material-icons" (click)="toggle()">
+                minimize
+                </span>
+                <span class="material-icons">
+                    open_in_full
+                    </span>
+                    <span class="material-icons" (click)=toggleDisplay()>
+                        close
+                        </span>
+        </div>
+      </div>
+      <div class="main">
+        <div class="mainTop">
+         <form action="">
+             <input type="text" placeholder="Recipients" class="ipText">
+             <input type="text" placeholder="Subject" class="ipText">
+             <textarea name="" id="" cols="30" rows="28"></textarea>
+         </form>
+        </div>
+        <div class="mainBottom">
+            <div class="butCls">
+               <button>Send</button>
+           </div>
+          <div class="leftI">
+              
+                <div class="material-icons">
+                    text_format
+                </div>
+                <label for="att">
+                    <div class="material-icons">
+                        attach_file
+                    </div>
+                </label>
+                <input type="file" id="att" ng2FileSelect [uploader]="uploader" multiple class="attach" />          
+                        <div class="material-icons">
+                            insert_link
+                        </div>
+                           
+                                <i
+        (click)="toggled = !toggled"
+        [(emojiPickerIf)]="toggled"
+        [emojiPickerDirection]="'bottom' || 'top' || 'left' || 'right'"
+        (emojiPickerSelect)="handleSelection($event)"> <div class="material-icons">
+            insert_emoticon</div></i>
+                                
+                               
+                            
+                            <label for="att2">
+                                <div class="material-icons">
+                                    add_to_drive
+                                </div>
+                            </label>
+                            <input type="file" id="att2" ng2FileSelect [uploader]="uploader" multiple class="attach" /> 
+                                    <div class="material-icons">
+                                        photo
+                                    </div>
+                                        <div class="material-icons">
+                                            lock_clock
+                                        </div>
+                                            <div class="material-icons">
+                                                create
+                                            </div>
+              </div>
+                                            <div class="rightI">
+    
+                                                <div class="material-icons">
+                                                    more_vert
+                                                </div>
+                                                    <div class="material-icons" (click)=toggleDisplay()>
+                                                        delete
+                                                    </div>
+                                            </div>
+        </div>
+    </div>
+    </div>
+    <div [hidden]="show" class="miniB" *ngIf="!isViewable">
+        <div class="top">
+            <div class="topleft">
+              <h3 class="text">New Message</h3>
+            </div>
+            <div class="topright">
+                <span class="material-icons" (click)=toggle()>
+                    minimize
+                    </span>
+                    <span class="material-icons" (click)=toggle()>
+                        open_in_full
+                        </span>
+                        <span class="material-icons" (click)=toggleDisplay()>
+                            close
+                            </span>
+            </div>
+          </div>
+        </div>
+</div>
