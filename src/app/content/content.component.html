@@ -91,17 +91,24 @@
               <div class="label-icon-hover">
                 <i class="material-icons">drag_indicator</i>
               </div>
-              <div *ngIf="!isCheckboxClicked" (click)="checkboxChecked()">
+              <div *ngIf="!isCheckboxClicked">
                 <i class="material-icons">check_box_outline_blank </i>
               </div>
-              <div *ngIf="isCheckboxClicked" (click)="checkboxChecked()">
+              <div *ngIf="isCheckboxClicked">
                 <i class="material-icons">check_box </i>
               </div>
-              <div>
+              <div *ngIf="!mailData.isstared">
+                <i
+                  class="material-icons"
+                  (click)="clickReadPrimary(mailData.id, mailData.isstared)"
+                  >star_outline</i
+                >
+              </div>
+              <div *ngIf="mailData.isstared">
                 <i
                   class="material-icons icon-blue"
-                  (click)="clickReadPrimary(mailData.id)"
-                  >star_outline</i
+                  (click)="clickReadPrimary(mailData.id, mailData.isstared)"
+                  >star</i
                 >
               </div>
               <p>{{ mailData.subject }}</p>
@@ -141,15 +148,26 @@
               <div class="label-icon-hover">
                 <i class="material-icons">drag_indicator</i>
               </div>
-              <div *ngIf="!isCheckboxClicked" (click)="checkboxChecked()">
+              <div *ngIf="!isCheckboxClicked">
                 <i class="material-icons">check_box_outline_blank </i>
               </div>
-              <div *ngIf="isCheckboxClicked" (click)="checkboxChecked()">
+              <div *ngIf="isCheckboxClicked">
                 <i class="material-icons">check_box </i>
               </div>
-              <i class="material-icons" (click)="clickReadPrimary(mailData.id)"
-                >star_outline</i
-              >
+              <div *ngIf="!mailData.isstared">
+                <i
+                  class="material-icons"
+                  (click)="clickReadSocial(mailData.id, mailData.isstared)"
+                  >star_outline</i
+                >
+              </div>
+              <div *ngIf="mailData.isstared">
+                <i
+                  class="material-icons icon-blue"
+                  (click)="clickReadSocial(mailData.id, mailData.isstared)"
+                  >star</i
+                >
+              </div>
 
               <p>{{ mailData.subject }}</p>
             </div>
@@ -188,15 +206,26 @@
               <div class="label-icon-hover">
                 <i class="material-icons">drag_indicator</i>
               </div>
-              <div *ngIf="!isCheckboxClicked" (click)="checkboxChecked()">
+              <div *ngIf="!isCheckboxClicked">
                 <i class="material-icons">check_box_outline_blank </i>
               </div>
-              <div *ngIf="isCheckboxClicked" (click)="checkboxChecked()">
+              <div *ngIf="isCheckboxClicked">
                 <i class="material-icons">check_box </i>
               </div>
-              <i class="material-icons" (click)="clickReadPrimary(mailData.id)"
-                >star_outline</i
-              >
+              <div *ngIf="!mailData.isstared">
+                <i
+                  class="material-icons"
+                  (click)="clickReadPromotion(mailData.id, mailData.isstared)"
+                  >star_outline</i
+                >
+              </div>
+              <div *ngIf="mailData.isstared">
+                <i
+                  class="material-icons icon-blue"
+                  (click)="clickReadPromotion(mailData.id, mailData.isstared)"
+                  >star</i
+                >
+              </div>
               <p>{{ mailData.subject }}</p>
             </div>
             <div class="message-content">

@@ -42,14 +42,16 @@ export class ContentComponent implements OnInit {
       this.refreshPrimary();
     });
   }
-  clickReadPrimary(id: string) {
-    this.dataservice.clickReadPrimary(+id).subscribe(val => {
+  clickReadPrimary(id: string, isstared: boolean) {
+    // console.log(isstared);
+    this.dataservice.clickReadPrimary(+id, !isstared).subscribe(val => {
       this.refreshPrimary();
     });
   }
   refreshPrimary() {
     this.dataservice.getMailDataPrimary().subscribe(val => {
       this.allMailPrimary = val;
+      // console.log(this.allMailPrimary);
     });
   }
 
@@ -64,9 +66,11 @@ export class ContentComponent implements OnInit {
       this.refreshSocial();
     });
   }
-  clickReadSocial(id: string) {
-    this.dataservice.clickReadSocial(+id).subscribe(val => {
-      this.refreshPrimary();
+
+  clickReadSocial(id: string, isstared: boolean) {
+    // console.log(isstared);
+    this.dataservice.clickReadSocial(+id, !isstared).subscribe(val => {
+      this.refreshSocial();
     });
   }
   refreshSocial() {
@@ -86,9 +90,10 @@ export class ContentComponent implements OnInit {
       this.refreshPromotion();
     });
   }
-  clickReadPromotion(id: string) {
-    this.dataservice.clickReadPromotion(+id).subscribe(val => {
-      this.refreshPrimary();
+  clickReadPromotion(id: string, isstared: boolean) {
+    // console.log(isstared);
+    this.dataservice.clickReadPromotion(+id, !isstared).subscribe(val => {
+      this.refreshPromotion();
     });
   }
   refreshPromotion() {

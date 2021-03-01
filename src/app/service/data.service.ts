@@ -16,8 +16,8 @@ export class DataService {
   readMailDataPrimary(id: number) {
     return this.http.put(this.API_BASE_URL + "/mails/" + id, { isread: true });
   }
-  clickReadPrimary(id: number) {
-    return this.http.put(this.API_BASE_URL + "/mails/" + id, { isstared: true });
+  clickReadPrimary(id: number, isstared: boolean) {
+    return this.http.put(this.API_BASE_URL + "/mails/" + id, { isstared: isstared });
   }
   deleteMailDataPrimary(id: number) {
     return this.http.delete(this.API_BASE_URL + "/mails/" + id);
@@ -29,8 +29,8 @@ export class DataService {
   readMailDataSocial(id: number) {
     return this.http.put(this.API_BASE_URL + "/social/" + id, { isread: true });
   }
-  clickReadSocial(id: number) {
-    return this.http.put(this.API_BASE_URL + "/social/" + id, { isstared: true });
+  clickReadSocial(id: number, isstared: boolean) {
+    return this.http.put(this.API_BASE_URL + "/social/" + id, { isstared: isstared });
   }
   deleteMailDataSocial(id: number) {
     return this.http.delete(this.API_BASE_URL + "/social/" + id);
@@ -42,8 +42,8 @@ export class DataService {
   readMailDataPromotion(id: number) {
     return this.http.put(this.API_BASE_URL + "/promotion/" + id, { isread: true });
   }
-  clickReadPromotion(id: number) {
-    return this.http.put(this.API_BASE_URL + "/promotion/" + id, { isstared: true });
+  clickReadPromotion(id: number, isstared: boolean) {
+    return this.http.put(this.API_BASE_URL + "/promotion/" + id, { isstared: isstared });
   }
   deleteMailDataPromotion(id: number) {
     return this.http.delete(this.API_BASE_URL + "/promotion/" + id);
