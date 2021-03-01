@@ -1,17 +1,20 @@
-.msgContainer{
+.msgContainer {
     width: 581px;
     height: 480px;
     /* //background-color: red; */
 }
-.top{
+
+.top {
     width: 581px;
     height: 40px;
     /* //background-color: blue; */
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-.topleft{
+
+.topleft {
     float: left;
     width: 75%;
     height: 100%;
@@ -23,52 +26,58 @@
     color: white;
     background-color: rgb(58, 56, 55);
 }
-.text{
+
+.text {
     padding-left: 11px;
     font-size: 15px;
-    font-family: sans-serif;;
+    font-family: sans-serif;
+    ;
     margin-bottom: 4px;
 }
-.topright{
+
+.topright {
     display: flex;
     justify-content: space-around;
     align-items: center;
     float: right;
-    width:25%;
+    width: 25%;
     height: 100%;
     color: gray;
     /* // margin-bottom: 2px;
     // margin: 5px; */
     cursor: pointer;
     background-color: rgb(58, 56, 55);
-    padding:5px;
-    
+    padding: 5px;
 }
-.main{
+
+.main {
     width: 100%;
     height: 549px;
 }
-input{
+
+input {
     width: 100%;
     border: none;
-    height:35px;
+    height: 35px;
     outline: none;
 }
-.mainTop{
+
+.mainTop {
     width: 100%;
     height: 381px;
     background-color: white;
 }
-.mainBottom{
+
+.mainBottom {
     position: absolute;
     width: 100%;
     display: flex;
     height: 59px;
     justify-content: space-around;
-    background-color:transparent;
+    background-color: transparent;
 }
 
-.leftI{
+.leftI {
     display: flex;
     flex: 0.8;
     flex-direction: row;
@@ -76,42 +85,48 @@ input{
     align-items: center;
     cursor: pointer;
 }
-.rightI{
+
+.rightI {
     display: flex;
     /* // flex:0.4; */
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
 }
-textarea{
+
+textarea {
     width: 100%;
-  /* //  height: 490px; */
-  border: none;
-  outline: none;
+    /* //  height: 490px; */
+    border: none;
+    outline: none;
 }
-button{
+
+button {
     width: 100px;
     height: 40px;
-    background-color: rgb(82, 51, 255);
+    background-color: #1a73e8;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 5px;
     margin-left: 7px;
-    color:white;
+    color: white;
     font-size: 20px;
     font-style: inherit;
     cursor: pointer;
 }
-.attach{
+
+.attach {
     display: none;
     cursor: pointer;
 }
-.miniB{
-   position: absolute;
-   bottom: 43%;
-   border-radius: 20px;
+
+.miniB {
+    position: absolute;
+    bottom: 43%;
+    border-radius: 20px;
 }
-.ipText{
+
+.ipText {
     padding-left: 5px;
     font-size: 15px;
     font-family: sans-serif;
