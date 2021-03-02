@@ -1,5 +1,5 @@
 
-<div [hidden]="show">
+<div [hidden]="show" class="container">
     <div class="msgContainer" *ngIf="isViewable">
       <div class="top">
         <div class="topleft">
@@ -8,19 +8,19 @@
         <div class="topright">
             <span class="material-icons" (click)="toggle()">
                 minimize
-                </span>
-                <span class="material-icons">
-                    open_in_full
-                    </span>
-                    <span class="material-icons" (click)=toggleDisplay()>
-                        close
-                        </span>
+            </span>
+            <span class="material-icons">
+                open_in_full
+            </span>
+            <span class="material-icons" (click)=toggleDisplay()>
+                close
+            </span>
         </div>
       </div>
       <div class="main">
         <div class="mainTop">
          <form action="">
-             <input type="text" placeholder="Recipients" class="ipText">
+             <input type="text" placeholder="To" class="ipText">
              <input type="text" placeholder="Subject" class="ipText">
              <textarea name="" id="" cols="30" rows="28"></textarea>
          </form>
@@ -89,13 +89,13 @@
             <div class="topright">
                 <span class="material-icons" (click)=toggle()>
                     minimize
-                    </span>
-                    <span class="material-icons" (click)=toggle()>
-                        open_in_full
-                        </span>
-                        <span class="material-icons" (click)=toggleDisplay()>
-                            close
-                            </span>
+                </span>
+                <span class="material-icons" (click)=toggle()>
+                    open_in_full
+                </span>
+                <span class="material-icons" (click)=toggleDisplay()>
+                    close
+                </span>
             </div>
           </div>
         </div>

@@ -8,6 +8,11 @@ import { NavbarService } from 'src/app/service/navbar.service';
 })
 export class Innercontainer1Component implements OnInit, OnChanges {
 
+  inboxOnHover: boolean = false;
+  starredOnHover: boolean = false;
+  snoozedOnHover: boolean = false;
+  sentOnHover: boolean = false;
+  draftsOnHover: boolean = false;
   largerWidth = '250px';
   shorterWidth = '65px';
   @Input() isMenuButtonEnabled: boolean = true;

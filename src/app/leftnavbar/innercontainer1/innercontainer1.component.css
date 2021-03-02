@@ -3,6 +3,7 @@
     height: 300px;
     background-color: transparent;
     transition: width .3s;
+    position: relative;
     /* border-bottom-color: lightgrey;
     border-bottom-style: solid; */
     border-bottom-style: solid;
@@ -12,6 +13,7 @@
 }
 
 button {
+    display: inline-block;
     width: 90%;
     height: 35px;
     padding-left: 10px;
@@ -24,6 +26,27 @@ button {
     justify-content: flex-start;
     align-items: center;
     transition: width .3s;
+}
+
+.onHoverContainer{
+    position: absolute;
+    display: inline-block;
+    transform: translate(100%, 0);
+    right: 10%;
+    z-index: 99;
+    background-color: black;
+    opacity: .7;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 button i {

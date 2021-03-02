@@ -1,27 +1,54 @@
 <div class="container" id="innerContainerWidth1">
     <app-compose [isMenuButtonEnabled]="toggle"></app-compose>
-    <button id="inbox"  id="innerContainerWidth">
-        <i class="material-icons" style="color: rgb(238, 26, 26);">inbox</i>
-        <span *ngIf="isMenuButtonEnabled" style="color: red;">Inbox</span>
-    </button>
-    <button id="containerWidth">
-        <i class="material-icons">star</i>
-        <span *ngIf="isMenuButtonEnabled">Starred</span>
-    </button>
-    <button id="containerWidth">
-        <i class="material-icons">timer</i>
-        <span *ngIf="isMenuButtonEnabled">Snoozed</span>
-    </button>
-    <button id="containerWidth">
-        <i class="material-icons">forward</i>
-        <span *ngIf="isMenuButtonEnabled">Sent</span>
-    </button>
-    <button id="containerWidth">
-        <i class="material-icons">mode</i>
-        <span *ngIf="isMenuButtonEnabled">Drafts</span>
-    </button>
-    <button id="containerWidth">
-        <i class="material-icons">keyboard_arrow_down</i>
-        <span *ngIf="isMenuButtonEnabled">More</span>
-    </button>
+    <div class="buttonContainer" (mouseover)="inboxOnHover = true" (mouseout)="inboxOnHover = false">
+        <button id="inbox"  id="innerContainerWidth">
+            <i class="material-icons" style="color: rgb(238, 26, 26);">inbox</i>
+            <span *ngIf="isMenuButtonEnabled" style="color: red;">Inbox</span>
+        </button>
+        <div class="onHoverContainer" *ngIf="inboxOnHover">
+            <span>Inbox</span>
+        </div>
+    </div>
+    <div class="buttonContainer" (mouseover)="starredOnHover = true" (mouseout)="starredOnHover = false">
+        <button id="containerWidth">
+            <i class="material-icons">star</i>
+            <span *ngIf="isMenuButtonEnabled">Starred</span>
+        </button>
+        <div class="onHoverContainer" *ngIf="starredOnHover">
+            <span>Starred</span>
+        </div>
+    </div>
+    <div class="buttonContainer" (mouseover)="snoozedOnHover = true" (mouseout)="snoozedOnHover = false">
+        <button id="containerWidth">
+            <i class="material-icons">timer</i>
+            <span *ngIf="isMenuButtonEnabled">Snoozed</span>
+        </button>
+        <div class="onHoverContainer" *ngIf="snoozedOnHover">
+            <span>Snoozed</span>
+        </div>
+    </div>
+    <div class="buttonContainer" (mouseover)="sentOnHover = true" (mouseout)="sentOnHover = false">
+        <button id="containerWidth">
+            <i class="material-icons">forward</i>
+            <span *ngIf="isMenuButtonEnabled">Sent</span>
+        </button>
+        <div class="onHoverContainer" *ngIf="sentOnHover">
+            <span>Sent</span>
+        </div>
+    </div>
+    <div class="buttonContainer" (mouseover)="draftsOnHover = true" (mouseout)="draftsOnHover = false">
+        <button id="containerWidth">
+            <i class="material-icons">mode</i>
+            <span *ngIf="isMenuButtonEnabled">Drafts</span>
+        </button>
+        <div class="onHoverContainer" *ngIf="draftsOnHover">
+            <span>Drafts</span>
+        </div>
+    </div>
+    <div class="buttonContainer">
+        <button id="containerWidth">
+            <i class="material-icons">keyboard_arrow_down</i>
+            <span *ngIf="isMenuButtonEnabled">More</span>
+        </button>
+    </div>
 </div>

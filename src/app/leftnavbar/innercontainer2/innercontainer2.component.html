@@ -1,14 +1,26 @@
 <div class="container" id="innerContainerWidth2">
-    <div *ngIf="isMenuButtonEnabled">Meet</div>
-    <div *ngIf="!isMenuButtonEnabled">
-        <i class="material-icons">photo_camera_front</i>
+    <div class="meet">
+        <div *ngIf="isMenuButtonEnabled">Meet</div>
+        <div *ngIf="!isMenuButtonEnabled">
+            <i class="material-icons">photo_camera_front</i>
+        </div>
     </div>
-    <button>
-        <i class="material-icons">video_camera_front</i>
-        <span *ngIf="isMenuButtonEnabled">New Meeting</span>
-    </button>
-    <button>
-        <i class="material-icons">keyboard</i>
-        <span *ngIf="isMenuButtonEnabled">Join a Meeting</span>
-    </button>
+    <div class="buttonContainer" (mouseover)="newMeetingOnHover = true" (mouseout)="newMeetingOnHover = false">
+        <button>
+            <i class="material-icons">video_camera_front</i>
+            <span *ngIf="isMenuButtonEnabled">New Meeting</span>
+        </button>
+        <div class="onHoverContainer" *ngIf="newMeetingOnHover">
+            <span>New Meeting</span>
+        </div>
+    </div>
+    <div class="buttonContainer" (mouseover)="joinAMeetingOnHover = true" (mouseout)="joinAMeetingOnHover = false">
+        <button>
+            <i class="material-icons">keyboard</i>
+            <span *ngIf="isMenuButtonEnabled">Join a Meeting</span>
+        </button>
+        <div class="onHoverContainer" *ngIf="joinAMeetingOnHover">
+            <span>Join a Meeting</span>
+        </div>
+    </div>
 </div>

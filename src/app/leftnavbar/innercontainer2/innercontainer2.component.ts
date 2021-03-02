@@ -7,6 +7,8 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 })
 export class Innercontainer2Component implements OnInit, OnChanges {
 
+  newMeetingOnHover: boolean = false;
+  joinAMeetingOnHover: boolean = false;
   largerWidth = '250px';
   shorterWidth = '65px';
   @Input() isMenuButtonEnabled: boolean = true;
